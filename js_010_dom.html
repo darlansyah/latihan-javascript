@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+  </head>
+  <body>
+    <div id="nama"></div>
+
+    <div class="tulis">
+      <p> Nama : Laode Darlansyah </p>
+      <p> Jurusan : Teknik Informatika </p>
+     </div>
+     <div class="tulis">
+       <p> Nama : Annisa Putri Andy </p>
+       <p> Jurusan : Teknik Kimia </p>
+      </div>
+
+      <h1 id="judul2"> ini judul dua </h1>
+
+      <label>Warna Layar :</label>
+      <input type="color" id="id-bg">
+      <br/>
+
+      <label>Warna text :</label>
+      <input type="color" id="id-txt">
+      <br/>
+
+
+
+    <script type="text/javascript">
+      // menggambil ID
+      var nama = document.getElementById('nama');
+      nama.innerHTML = "<p> Laode Darlanyah </p>";
+      nama.style.background = "gold";
+      nama.style.padding = "40px";
+      // end menggambil ID
+
+
+      // menggambil class
+      var tulis = document.getElementsByClassName("tulis")
+      setInterval(function (){
+        tulis[0].style.color = "red";
+        tulis[0].style.color = "blue";
+
+        setTimeout(function (){
+          tulis[0].style.color = "black";
+          tulis[0].style.color = "black";
+        },500);
+      },1000);
+      // end menggambil class
+
+      // end membuat element
+
+      // menghapus element
+      var judul = document.createElement("h1")
+      judul.textContent = "hello Wolrd";
+      document.body.append(judul);
+      // end membuat element
+
+      var h1 = document.getElementById("judul2");
+
+      h1.remove()
+
+      console.log("sudah dihapus");
+      console.log(h1);
+      // end menghapus element
+
+
+      // aplikasi mengubah warna
+      var bgcolor = document.getElementById('id-bg');
+      var txtcolor = document.getElementById('id-txt');
+
+      bgcolor.addEventListener("change",(event) => {
+        document.body.style.backgroundColor = bgcolor.value;
+      });
+
+      txtcolor.addEventListener("change",(event) => {
+        document.body.style.color = txtcolor.value;
+      });
+      // end aplikasi mengubah warna
+
+    </script>
+  </body>
+</html>
