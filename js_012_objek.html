@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objek</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+    <!-- pengenalan properti dan method -->
+        var mhs = {
+        <!-- properti -->
+          nama : "darlan",
+          Jurusan : "informatika",
+          hobby : "koding",
+
+          <!-- method -->
+          kota:function(){
+            console.log("kota : kendari");
+            console.log("nama : " + this.nama);
+          },
+
+          suku : function (){
+            console.log("suku : muna");
+          }
+        };
+         mhs.kota()
+         mhs.suku()
+     <!-- end pengenalan properti dan method -->
+
+     <!-- pengenalan properti dan method dengan this-->
+         var person = {
+           firstname : "Laode",
+           lastname : "Darlansyah",
+
+           showname : function(){
+             console.log("My Name is " + this.firstname + " " + this.lastname);
+           }
+         };
+
+        person.showname();
+    <!-- end pengenalan properti dan method dengan this-->
+
+    <!-- class -->
+        function Orang(firstname,lastname){
+          <!-- properti -->
+          this.firstname = firstname;
+          this.lastname = lastname;
+
+          this.fullname = function(){
+            return `${this.firstname} ${this.lastname}`
+
+          },
+          this.showname = function(){
+            document.write(this.fullname());
+          }
+        }
+        var org1 = new Orang("annisa","putri");
+        org1.showname();
+        document.write("<br/>");
+        var org2 = new Orang("waode","fatima");
+        org2.showname();
+
+    <!-- end class -->
+  </script>
+</html>
