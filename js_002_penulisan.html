@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Penulisan JS</title>
+  </head>
+  <!-- penggunakan tag 01-->
+  <script>
+      console.log("penulisan 01 menggunakan tag")
+  </script>
+  <!-- end penggunakan tag 01-->
+  <body>
+    <script type="text/javascript">
+      document.write("penulisan 02 menggunakan tag")
+    </script>
+
+    <!-- pemanggilan eksternal 02-->
+    <script  scr="js/script02.js">  </script>
+    <!-- end pemanggilan eksternal 02-->
+
+    <br/>
+    <!-- pemanggilan menggukan event 03-->
+      <a href="#" onclick="alert('pemanggilan menggunakan event')"> klik</a>
+    <!-- end pemanggilan menggukan event 03-->
+    <br/>
+    <!-- pemanggilan menggunakan URL 04-->
+      <a href="#" onclick="javascript:alert('ini pemanggilan menggukan URL')"> Klik </a>
+    <!-- end pemanggilan menggunakan URL 04-->
+
+  </body>
+</html>
