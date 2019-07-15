@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax</title>
+  </head>
+  <body>
+    <h1>Tutorial Ajax</h1>
+    <div id="hasil"> </div>
+    <button type="button" onclick="loadcontent()">Load Content</button>
+     <br/>
+     <br/>
+    <div id="hasil2"> </div>
+    <button type="button" id="button" onclick="loadkonten()"> load konten</button>
+
+    <script type="text/javascript">
+      // contoh 01
+      function loadcontent(){
+        var xhr = new XMLHttpRequest();
+        var url = "https://api.github.com/users/petanikode";
+
+        xhr.onreadystatechange = function(){
+          if(this.readyState == 4 && this.status == 200){
+            document.getElementById("hasil").innerHTML = this.response;
+          }
+        };
+        xhr.open("GET",url,true);
+        xhr.send();
+      }
+        // end contoh 01
+
+      // contoh 02
+      function loadkonten(){
+        var xhr = new XMLHttpRequest();
+        var url = "https://api.github.com/users/petanikode";
+
+        xhr.onloadstart  = function(){
+          document.getElementById("button").innerHTML = "Loading..";
+        }
+        // xhr.onerror = function(){
+        //   if(this.responseText !== ""){
+        //     var data = JSON.parse
+        //   }
+        // }
+      }
+
+
+
+
+      // end contoh 02
+    </script>
+  </body>
+</html>
